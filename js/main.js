@@ -253,18 +253,18 @@ document.addEventListener('DOMContentLoaded', function() {
                             From
                             <strong>${item.price}</strong>
                         </div>
-                        <button class="btn-add-quote" data-service="${item.title}">
-                            <i class="fas fa-plus"></i> Add to Quote
+                        <button class="btn-add-quote" data-service="${item.title}" data-price="${item.price}">
+                            <i class="fas fa-cart-plus"></i> Add to Cart
                         </button>
                     </div>
                 </div>
             </div>
         `).join('');
 
-        // Attach add-to-quote handlers
+        // Attach add-to-cart handlers
         productGrid.querySelectorAll('.btn-add-quote').forEach(btn => {
             btn.addEventListener('click', function() {
-                addToQuote(this.dataset.service);
+                addToCart(this.dataset.service, this.dataset.price);
             });
         });
     }
@@ -281,29 +281,115 @@ document.addEventListener('DOMContentLoaded', function() {
     renderProducts('windscreens');
 
     // ==========================================
-    // QUOTE BASKET
+    // CART FUNCTIONALITY
     // ==========================================
-    let quoteItems = JSON.parse(localStorage.getItem('quoteItems') || '[]');
-    const quoteCountEl = document.getElementById('quoteCount');
+    let cartItems = JSON.parse(localStorage.getItem('cartItems') || '[]');
+    const cartCountEl = document.getElementById('cartCount');
+    const cartToggleBtn = document.getElementById('cartToggleBtn');
+    const cartDrawer = document.getElementById('cartDrawer');
+    const cartOverlay = document.getElementById('cartOverlay');
+    const cartDrawerClose = document.getElementById('cartDrawerClose');
+    const cartItemsEl = document.getElementById('cartItems');
+    const cartEmptyEl = document.getElementById('cartEmpty');
+    const cartTotalCountEl = document.getElementById('cartTotalCount');
+    const cartCheckoutBtn = document.getElementById('cartCheckoutBtn');
+    const cartClearBtn = document.getElementById('cartClearBtn');
 
-    function updateQuoteCount() {
-        if (quoteCountEl) {
-            quoteCountEl.textContent = quoteItems.length;
-        }
+    function updateCartCount() {
+        if (cartCountEl) cartCountEl.textContent = cartItems.length;
     }
 
-    function addToQuote(serviceName) {
-        if (!quoteItems.includes(serviceName)) {
-            quoteItems.push(serviceName);
-            localStorage.setItem('quoteItems', JSON.stringify(quoteItems));
-            updateQuoteCount();
-            showNotification(serviceName + ' added to quote!');
+    function renderCart() {
+        if (!cartItemsEl) return;
+        if (cartItems.length === 0) {
+            cartItemsEl.innerHTML = '';
+            if (cartEmptyEl) cartEmptyEl.style.display = 'block';
+            if (cartCheckoutBtn) cartCheckoutBtn.style.display = 'none';
+            if (cartClearBtn) cartClearBtn.style.display = 'none';
         } else {
-            showNotification('Already in your quote basket.');
+            if (cartEmptyEl) cartEmptyEl.style.display = 'none';
+            if (cartCheckoutBtn) cartCheckoutBtn.style.display = 'flex';
+            if (cartClearBtn) cartClearBtn.style.display = 'block';
+            cartItemsEl.innerHTML = cartItems.map((item, idx) => `
+                <div class="cart-item">
+                    <div class="cart-item-info">
+                        <h4>${item.name}</h4>
+                        <span>Auto Glass Service</span>
+                    </div>
+                    <span class="cart-item-price">${item.price}</span>
+                    <button class="cart-item-remove" data-index="${idx}" title="Remove">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            `).join('');
+
+            cartItemsEl.querySelectorAll('.cart-item-remove').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    removeFromCart(parseInt(this.dataset.index));
+                });
+            });
+        }
+        if (cartTotalCountEl) cartTotalCountEl.textContent = cartItems.length;
+        updateCartCount();
+    }
+
+    function addToCart(serviceName, price) {
+        const exists = cartItems.some(item => item.name === serviceName);
+        if (!exists) {
+            cartItems.push({ name: serviceName, price: price || '' });
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            renderCart();
+            showNotification(serviceName + ' added to cart!');
+        } else {
+            showNotification('Already in your cart.');
         }
     }
 
-    updateQuoteCount();
+    function removeFromCart(index) {
+        const removed = cartItems.splice(index, 1);
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        renderCart();
+        if (removed.length) showNotification(removed[0].name + ' removed from cart.');
+    }
+
+    function clearCart() {
+        cartItems = [];
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        renderCart();
+        showNotification('Cart cleared.');
+    }
+
+    function openCart() {
+        if (cartDrawer) cartDrawer.classList.add('open');
+        if (cartOverlay) cartOverlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeCart() {
+        if (cartDrawer) cartDrawer.classList.remove('open');
+        if (cartOverlay) cartOverlay.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+
+    if (cartToggleBtn) cartToggleBtn.addEventListener('click', openCart);
+    if (cartDrawerClose) cartDrawerClose.addEventListener('click', closeCart);
+    if (cartOverlay) cartOverlay.addEventListener('click', closeCart);
+    if (cartClearBtn) cartClearBtn.addEventListener('click', clearCart);
+    if (cartCheckoutBtn) {
+        cartCheckoutBtn.addEventListener('click', function() {
+            closeCart();
+        });
+    }
+
+    // Migrate old quoteItems to cartItems
+    const oldQuoteItems = JSON.parse(localStorage.getItem('quoteItems') || '[]');
+    if (oldQuoteItems.length && !cartItems.length) {
+        cartItems = oldQuoteItems.map(name => ({ name: name, price: '' }));
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        localStorage.removeItem('quoteItems');
+    }
+
+    renderCart();
 
     // ==========================================
     // NOTIFICATION TOAST

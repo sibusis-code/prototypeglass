@@ -58,8 +58,7 @@
                     <div class="search-results" id="searchResults"></div>
                 </div>
                 <div class="nav-actions">
-                    <a href="contact.html" class="nav-action-btn"><i class="fas fa-user"></i><span>Account</span></a>
-                    <a href="index.html#quote" class="nav-action-btn nav-quote-btn"><i class="fas fa-file-invoice"></i><span>Quote</span><span class="quote-count" id="quoteCount">0</span></a>
+                    <button class="nav-action-btn nav-cart-btn" title="Cart" id="cartToggleBtn"><i class="fas fa-shopping-cart"></i><span>Cart</span><span class="cart-count" id="cartCount">0</span></button>
                 </div>
                 <button class="mobile-toggle" id="mobileToggle" aria-label="Menu"><span></span><span></span><span></span></button>
             </div>
@@ -277,6 +276,36 @@
     </footer>
 
     <button id="scrollTop" class="scroll-top"><i class="fas fa-chevron-up"></i></button>
+
+    <!-- Cart Drawer -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-drawer-header">
+            <h3><i class="fas fa-shopping-cart"></i> Your Cart</h3>
+            <button class="cart-drawer-close" id="cartDrawerClose"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-drawer-body" id="cartDrawerBody">
+            <div class="cart-empty" id="cartEmpty">
+                <i class="fas fa-cart-plus"></i>
+                <p>Your cart is empty</p>
+                <span>Add services from our product listings</span>
+            </div>
+            <div class="cart-items" id="cartItems"></div>
+        </div>
+        <div class="cart-drawer-footer" id="cartDrawerFooter">
+            <div class="cart-total">
+                <span>Items:</span>
+                <strong id="cartTotalCount">0</strong>
+            </div>
+            <a href="index.html#quote" class="btn btn-primary btn-block cart-checkout-btn" id="cartCheckoutBtn">
+                <i class="fas fa-paper-plane"></i> Request Quote for All
+            </a>
+            <button class="cart-clear-btn" id="cartClearBtn">
+                <i class="fas fa-trash"></i> Clear Cart
+            </button>
+        </div>
+    </div>
+
     <a href="https://wa.me/27732254809" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
     <!-- Chatbot -->
