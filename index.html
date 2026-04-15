@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prototype Glass Windscreen - Premium auto glass replacement & repair in Randburg. SABS approved, insurance claims, same-day service. 4.5★ rated.">
+    <meta name="keywords" content="windscreen replacement, auto glass, Randburg, Craighall Park, car glass repair, SABS approved">
+    <meta name="csrf-token" content="">
+    <title>Prototype Glass Windscreen | Premium Auto Glass - Randburg</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-inner">
+                <div class="top-bar-left">
+                    <a href="tel:0732254809"><i class="fas fa-phone"></i> 073 225 4809</a>
+                    <a href="mailto:info@prototypeglass.co.za"><i class="fas fa-envelope"></i> info@prototypeglass.co.za</a>
+                    <span class="top-bar-hours"><i class="fas fa-clock"></i> Mon-Fri 8am-5pm | Sat 8am-1pm</span>
+                </div>
+                <div class="top-bar-right">
+                    <div class="top-bar-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <div class="top-bar-trust">
+                        <span><i class="fas fa-shield-halved"></i> SABS Approved</span>
+                        <span><i class="fas fa-star"></i> 4.5★ (4,517 Reviews)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <img src="images/brands/logo.jpeg" alt="Prototype Glass Windscreen">
+                    <div class="logo-text">
+                        <span class="logo-name">Prototype Glass</span>
+                        <span class="logo-tagline">Auto Glass Specialists</span>
+                    </div>
+                </a>
+
+                <div class="nav-search" id="navSearch">
+                    <form action="search.php" method="GET" class="search-form">
+                        <select name="category" class="search-category">
+                            <option value="all">All</option>
+                            <option value="windscreen">Windscreens</option>
+                            <option value="rear">Rear Glass</option>
+                            <option value="door">Door Glass</option>
+                            <option value="repair">Repairs</option>
+                        </select>
+                        <input type="text" name="q" placeholder="Search by vehicle make, model or glass type..." class="search-input" id="searchInput" autocomplete="off">
+                        <button type="submit" class="search-btn"><i class="fas fa-search"></i></button>
+                    </form>
+                    <div class="search-results" id="searchResults"></div>
+                </div>
+
+                <div class="nav-actions">
+                    <a href="contact.html" class="nav-action-btn" title="My Account">
+                        <i class="fas fa-user"></i>
+                        <span>Account</span>
+                    </a>
+                    <a href="#quote" class="nav-action-btn nav-quote-btn" title="Quote Basket" id="quoteBasketBtn">
+                        <i class="fas fa-file-invoice"></i>
+                        <span>Quote</span>
+                        <span class="quote-count" id="quoteCount">0</span>
+                    </a>
+                </div>
+
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <div class="nav-menu-wrapper" id="navMenuWrapper">
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li class="has-dropdown">
+                        <a href="services.html">Services <i class="fas fa-chevron-down"></i></a>
+                        <div class="mega-dropdown">
+                            <div class="mega-col">
+                                <h4>Replacement</h4>
+                                <a href="services.html#windscreen">Windscreen Replacement</a>
+                                <a href="services.html#rear">Rear Screen Replacement</a>
+                                <a href="services.html#door">Door Glass</a>
+                                <a href="services.html#quarter">Quarter Glass</a>
+                            </div>
+                            <div class="mega-col">
+                                <h4>Repair & More</h4>
+                                <a href="services.html#chip">Chip Repair</a>
+                                <a href="services.html#insurance">Insurance Claims</a>
+                                <a href="services.html#calibration">ADAS Calibration</a>
+                                <a href="services.html#tinting">Window Tinting</a>
+                            </div>
+                            <div class="mega-col mega-promo">
+                                <img src="images/services/WhatsApp Image 2026-04-15 at 3.09.18 PM.jpeg" alt="Our Work">
+                                <p>Premium quality auto glass for every vehicle</p>
+                                <a href="services.html" class="mega-cta">View All Services</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-menu-cta">
+                    <a href="tel:0732254809" class="nav-call-btn"><i class="fas fa-phone"></i> 073 225 4809</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-slider">
+            <div class="hero-slide active" style="background-image: url('images/services/WhatsApp Image 2026-04-15 at 3.09.18 PM.jpeg')"></div>
+            <div class="hero-slide" style="background-image: url('images/services/WhatsApp Image 2026-04-15 at 3.09.17 PM.jpeg')"></div>
+            <div class="hero-slide" style="background-image: url('images/services/WhatsApp Image 2026-04-15 at 3.09.19 PM.jpeg')"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge-top">
+                    <span><i class="fas fa-shield-halved"></i> SABS Certified</span>
+                    <span><i class="fas fa-award"></i> 25+ Years Experience</span>
+                </div>
+                <h1>Premium Auto Glass<br><span class="text-accent">Replacement & Repair</span></h1>
+                <p class="hero-desc">Trusted by 4,500+ customers in Randburg. Same-day fitment, insurance claims processed, and lifetime warranty on all installations.</p>
+                <div class="hero-cta">
+                    <a href="#quote" class="btn btn-primary btn-lg"><i class="fas fa-file-invoice"></i> Get Free Quote</a>
+                    <a href="services.html" class="btn btn-outline-light btn-lg"><i class="fas fa-th-large"></i> Browse Services</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <strong>4,517+</strong>
+                        <span>Happy Customers</span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat">
+                        <strong>4.5 <i class="fas fa-star"></i></strong>
+                        <span>Google Rating</span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat">
+                        <strong>Same Day</strong>
+                        <span>Fitment Available</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-slider-nav">
+            <button class="slider-dot active" data-slide="0"></button>
+            <button class="slider-dot" data-slide="1"></button>
+            <button class="slider-dot" data-slide="2"></button>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="trust-bar">
+        <div class="container">
+            <div class="trust-items">
+                <div class="trust-item">
+                    <i class="fas fa-truck-fast"></i>
+                    <div>
+                        <strong>Same-Day Service</strong>
+                        <span>Most jobs done in under 2 hours</span>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-shield-halved"></i>
+                    <div>
+                        <strong>SABS Approved</strong>
+                        <span>Certified quality glass</span>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-file-shield"></i>
+                    <div>
+                        <strong>Insurance Claims</strong>
+                        <span>All major insurers accepted</span>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-certificate"></i>
+                    <div>
+                        <strong>Lifetime Warranty</strong>
+                        <span>On all installations</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Categories -->
+    <section class="categories" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">What We Offer</span>
+                <h2>Our Services</h2>
+                <p>Complete auto glass solutions for every vehicle type and budget</p>
+            </div>
+            <div class="category-grid">
+                <a href="services.html#windscreen" class="category-card">
+                    <div class="category-img">
+                        <img src="images/services/WhatsApp Image 2026-04-15 at 3.09.18 PM.jpeg" alt="Windscreen Replacement" loading="lazy">
+                        <div class="category-overlay"></div>
+                    </div>
+                    <div class="category-info">
+                        <h3>Windscreen Replacement</h3>
+                        <p>From <strong>R1,500</strong></p>
+                        <span class="category-link">View Options <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                <a href="services.html#rear" class="category-card">
+                    <div class="category-img">
+                        <img src="images/services/WhatsApp Image 2026-04-15 at 3.09.18 PM (1).jpeg" alt="Rear Screen Replacement" loading="lazy">
+                        <div class="category-overlay"></div>
+                    </div>
+                    <div class="category-info">
+                        <h3>Rear Screen Replacement</h3>
+                        <p>From <strong>R1,800</strong></p>
+                        <span class="category-link">View Options <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                <a href="services.html#door" class="category-card">
+                    <div class="category-img">
+                        <img src="images/services/WhatsApp Image 2026-04-15 at 3.09.17 PM (1).jpeg" alt="Door Glass" loading="lazy">
+                        <div class="category-overlay"></div>
+                    </div>
+                    <div class="category-info">
+                        <h3>Door Glass</h3>
+                        <p>From <strong>R800</strong></p>
+                        <span class="category-link">View Options <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                <a href="services.html#chip" class="category-card">
+                    <div class="category-img">
+                        <img src="images/services/WhatsApp Image 2026-04-15 at 3.09.16 PM.jpeg" alt="Chip Repair" loading="lazy">
+                        <div class="category-overlay"></div>
+                    </div>
+                    <div class="category-info">
+                        <h3>Chip Repair</h3>
+                        <p>From <strong>R350</strong></p>
+                        <span class="category-link">View Options <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                <a href="services.html#insurance" class="category-card category-card-wide">
+                    <div class="category-img">
+                        <img src="images/services/WhatsApp Image 2026-04-15 at 3.09.19 PM.jpeg" alt="Insurance Claims" loading="lazy">
+                        <div class="category-overlay"></div>
+                    </div>
+                    <div class="category-info">
+                        <h3>Insurance Claims</h3>
+                        <p>We handle <strong>all paperwork</strong></p>
+                        <span class="category-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products / Services -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Popular</span>
+                <h2>Featured Services</h2>
+                <p>Our most requested auto glass services</p>
+            </div>
+            <div class="product-tabs">
+                <button class="product-tab active" data-tab="windscreens">Windscreens</button>
+                <button class="product-tab" data-tab="rearscreens">Rear Screens</button>
+                <button class="product-tab" data-tab="doorglass">Door Glass</button>
+                <button class="product-tab" data-tab="quarterglass">Quarter Glass</button>
+            </div>
+            <div class="product-grid" id="productGrid">
+                <!-- Populated by JS -->
+            </div>
+            <div class="products-footer">
+                <a href="services.html" class="btn btn-outline">View All Services <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="process">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Simple Process</span>
+                <h2>How It Works</h2>
+                <p>Getting your glass replaced is easy</p>
+            </div>
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="process-icon">
+                        <i class="fas fa-phone-volume"></i>
+                        <span class="process-num">01</span>
+                    </div>
+                    <h3>Contact Us</h3>
+                    <p>Call, WhatsApp, or fill out our online quote form with your vehicle details</p>
+                </div>
+                <div class="process-connector"></div>
+                <div class="process-step">
+                    <div class="process-icon">
+                        <i class="fas fa-calculator"></i>
+                        <span class="process-num">02</span>
+                    </div>
+                    <h3>Instant Quote</h3>
+                    <p>Receive competitive pricing for your specific vehicle make and model</p>
+                </div>
+                <div class="process-connector"></div>
+                <div class="process-step">
+                    <div class="process-icon">
+                        <i class="fas fa-calendar-check"></i>
+                        <span class="process-num">03</span>
+                    </div>
+                    <h3>Book & Pay</h3>
+                    <p>Choose a convenient time and secure your booking online or in-store</p>
+                </div>
+                <div class="process-connector"></div>
+                <div class="process-step">
+                    <div class="process-icon">
+                        <i class="fas fa-check-circle"></i>
+                        <span class="process-num">04</span>
+                    </div>
+                    <h3>Professional Fitment</h3>
+                    <p>Expert installation at our Randburg workshop with full warranty</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands We Service -->
+    <section class="brands-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">All Makes & Models</span>
+                <h2>Brands We Service</h2>
+            </div>
+            <div class="brands-showcase">
+                <div class="brand-item">
+                    <img src="images/services/WhatsApp Image 2026-04-15 at 3.09.17 PM.jpeg" alt="BMW" loading="lazy">
+                    <div class="brand-overlay">
+                        <h4>BMW</h4>
+                        <span>All Series</span>
+                        <a href="#quote" class="btn btn-sm btn-primary">Get Quote</a>
+                    </div>
+                </div>
+                <div class="brand-item">
+                    <img src="images/services/WhatsApp Image 2026-04-15 at 3.09.18 PM (1).jpeg" alt="Mercedes-Benz" loading="lazy">
+                    <div class="brand-overlay">
+                        <h4>Mercedes-Benz</h4>
+                        <span>C, E, GLC, GLE</span>
+                        <a href="#quote" class="btn btn-sm btn-primary">Get Quote</a>
+                    </div>
+                </div>
+                <div class="brand-item">
+                    <img src="images/services/WhatsApp Image 2026-04-15 at 3.09.19 PM.jpeg" alt="SUVs & 4x4" loading="lazy">
+                    <div class="brand-overlay">
+                        <h4>SUVs & 4x4</h4>
+                        <span>All Brands</span>
+                        <a href="#quote" class="btn btn-sm btn-primary">Get Quote</a>
+                    </div>
+                </div>
+                <div class="brand-item">
+                    <img src="images/services/WhatsApp Image 2026-04-15 at 3.09.16 PM (1).jpeg" alt="Toyota" loading="lazy">
+                    <div class="brand-overlay">
+                        <h4>Toyota</h4>
+                        <span>All Models</span>
+                        <a href="#quote" class="btn btn-sm btn-primary">Get Quote</a>
+                    </div>
+                </div>
+                <div class="brand-item">
+                    <img src="images/services/WhatsApp Image 2026-04-15 at 3.09.17 PM (1).jpeg" alt="VW" loading="lazy">
+                    <div class="brand-overlay">
+                        <h4>Volkswagen</h4>
+                        <span>Polo, Golf, Tiguan</span>
+                        <a href="#quote" class="btn btn-sm btn-primary">Get Quote</a>
+                    </div>
+                </div>
+                <div class="brand-item">
+                    <img src="images/services/WhatsApp Image 2026-04-15 at 3.09.18 PM (2).jpeg" alt="Ford" loading="lazy">
+                    <div class="brand-overlay">
+                        <h4>Ford</h4>
+                        <span>Ranger, EcoSport</span>
+                        <a href="#quote" class="btn btn-sm btn-primary">Get Quote</a>
+                    </div>
+                </div>
+            </div>
+            <p class="brands-note">Don't see your vehicle? We service <strong>all makes and models</strong>. <a href="#quote">Get a quote now</a></p>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Customer Reviews</span>
+                <h2>What Our Customers Say</h2>
+            </div>
+            <div class="testimonial-slider" id="testimonialSlider">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"Excellent service! Had my BMW windscreen replaced in under 2 hours. Professional team and great quality glass. Highly recommended!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JM</div>
+                        <div>
+                            <strong>Johan Muller</strong>
+                            <span>BMW 3 Series Owner</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"They handled my insurance claim from start to finish. Zero hassle. The new windscreen looks perfect and was fitted same day."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SN</div>
+                        <div>
+                            <strong>Sarah Naidoo</strong>
+                            <span>Mercedes C-Class Owner</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i>
+                    </div>
+                    <p>"Best price I found in Randburg. Quick chip repair saved my windscreen from cracking further. Will definitely use again."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">TM</div>
+                        <div>
+                            <strong>Thabo Mokoena</strong>
+                            <span>VW Polo Owner</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote-section" id="quote">
+        <div class="container">
+            <div class="quote-wrapper">
+                <div class="quote-info">
+                    <span class="section-badge section-badge-light">Free Quote</span>
+                    <h2>Request Your Free Quote</h2>
+                    <p>Get competitive pricing for your auto glass needs. We'll respond within 24 hours with a detailed quote.</p>
+                    <div class="quote-features">
+                        <div class="quote-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>No-obligation quote</span>
+                        </div>
+                        <div class="quote-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Response within 24 hours</span>
+                        </div>
+                        <div class="quote-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Price match guarantee</span>
+                        </div>
+                        <div class="quote-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Insurance claims welcome</span>
+                        </div>
+                    </div>
+                    <div class="quote-contact">
+                        <p>Prefer to call?</p>
+                        <a href="tel:0732254809" class="quote-phone"><i class="fas fa-phone"></i> 073 225 4809</a>
+                        <a href="https://wa.me/27732254809" class="quote-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+                    </div>
+                </div>
+                <div class="quote-form-card">
+                    <div class="quote-form-header">
+                        <h3><i class="fas fa-file-invoice"></i> Quote Request Form</h3>
+                    </div>
+                    <form id="quoteForm" action="php/submit-quote.php" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name <span class="required">*</span></label>
+                                <input type="text" id="name" name="name" placeholder="John Smith" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number <span class="required">*</span></label>
+                                <input type="tel" id="phone" name="phone" placeholder="073 225 4809" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="john@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="vehicle">Vehicle Make & Model <span class="required">*</span></label>
+                                <input type="text" id="vehicle" name="vehicle" placeholder="e.g. Toyota Corolla 2020" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="glassType">Glass Type <span class="required">*</span></label>
+                                <select id="glassType" name="glassType" required>
+                                    <option value="">Select glass type</option>
+                                    <option value="windscreen">Windscreen</option>
+                                    <option value="rear-screen">Rear Screen</option>
+                                    <option value="door-glass">Door Glass</option>
+                                    <option value="quarter-glass">Quarter Glass</option>
+                                    <option value="chip-repair">Chip Repair</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="insurance">Insurance Claim?</label>
+                                <select id="insurance" name="insurance">
+                                    <option value="no">No - Cash Payment</option>
+                                    <option value="yes">Yes - Insurance Claim</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Additional Details</label>
+                            <textarea id="message" name="message" rows="3" placeholder="Describe the damage, preferred date, or any questions..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fas fa-paper-plane"></i> Submit Quote Request
+                        </button>
+                        <p class="form-disclaimer">By submitting, you agree to our <a href="#">Privacy Policy</a>. We'll never spam you.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location -->
+    <section class="location-section" id="location">
+        <div class="container">
+            <div class="location-grid">
+                <div class="location-info">
+                    <span class="section-badge">Find Us</span>
+                    <h2>Visit Our Workshop</h2>
+                    <div class="location-details">
+                        <div class="location-detail">
+                            <i class="fas fa-location-dot"></i>
+                            <div>
+                                <strong>Address</strong>
+                                <p>373 Jan Smuts Ave, Craighall Park<br>Randburg, 2196</p>
+                            </div>
+                        </div>
+                        <div class="location-detail">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Phone</strong>
+                                <p><a href="tel:0732254809">073 225 4809</a></p>
+                            </div>
+                        </div>
+                        <div class="location-detail">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <p><a href="mailto:info@prototypeglass.co.za">info@prototypeglass.co.za</a></p>
+                            </div>
+                        </div>
+                        <div class="location-detail">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Hours</strong>
+                                <p>Mon-Fri: 8:00am - 5:00pm<br>Saturday: 8:00am - 1:00pm<br>Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary"><i class="fas fa-directions"></i> Get Directions</a>
+                </div>
+                <div class="location-map">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3583.123456789!2d28.044123456789!3d-26.134567890123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDA4JzA0LjQiUyAyOMKwMDInMzguOCJF!5e0!3m2!1sen!2sza!4v1234567890123!5m2!1sen!2sza" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0; border-radius: 16px;" 
+                        allowfullscreen="" 
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-inner">
+                <div class="newsletter-text">
+                    <h3><i class="fas fa-bell"></i> Stay Updated</h3>
+                    <p>Get exclusive deals, seasonal promotions, and auto glass tips delivered to your inbox.</p>
+                </div>
+                <form class="newsletter-form" action="php/newsletter.php" method="POST">
+                    <input type="email" name="newsletter_email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col footer-about">
+                    <a href="index.html" class="footer-logo">
+                        <img src="images/brands/logo.jpeg" alt="Prototype Glass">
+                        <span>Prototype Glass</span>
+                    </a>
+                    <p>Randburg's trusted auto glass specialists since 1995. SABS approved, insurance-friendly, and committed to quality workmanship.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/27732254809" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="Google"><i class="fab fa-google"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#windscreen">Windscreen Replacement</a></li>
+                        <li><a href="services.html#rear">Rear Screen Replacement</a></li>
+                        <li><a href="services.html#door">Door Glass</a></li>
+                        <li><a href="services.html#chip">Chip Repair</a></li>
+                        <li><a href="services.html#insurance">Insurance Claims</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-location-dot"></i> 373 Jan Smuts Ave, Craighall Park</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:0732254809">073 225 4809</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@prototypeglass.co.za">info@prototypeglass.co.za</a></li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri 8am-5pm, Sat 8am-1pm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-left">
+                    <p>&copy; 2026 Prototype Glass Windscreen. All rights reserved.</p>
+                </div>
+                <div class="footer-bottom-right">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <div class="footer-payment">
+                        <span>We Accept:</span>
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button id="scrollTop" class="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/27732254809" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

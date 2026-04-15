@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Auto glass services - windscreen replacement, rear screen, door glass, chip repair & insurance claims at Prototype Glass Windscreen, Randburg.">
+    <title>Our Services | Prototype Glass Windscreen - Randburg</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-inner">
+                <div class="top-bar-left">
+                    <a href="tel:0732254809"><i class="fas fa-phone"></i> 073 225 4809</a>
+                    <a href="mailto:info@prototypeglass.co.za"><i class="fas fa-envelope"></i> info@prototypeglass.co.za</a>
+                    <span class="top-bar-hours"><i class="fas fa-clock"></i> Mon-Fri 8am-5pm | Sat 8am-1pm</span>
+                </div>
+                <div class="top-bar-right">
+                    <div class="top-bar-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <img src="images/brands/logo.jpeg" alt="Prototype Glass Windscreen">
+                    <div class="logo-text">
+                        <span class="logo-name">Prototype Glass</span>
+                        <span class="logo-tagline">Auto Glass Specialists</span>
+                    </div>
+                </a>
+                <div class="nav-search" id="navSearch">
+                    <form action="search.php" method="GET" class="search-form">
+                        <select name="category" class="search-category">
+                            <option value="all">All</option>
+                            <option value="windscreen">Windscreens</option>
+                            <option value="rear">Rear Glass</option>
+                            <option value="door">Door Glass</option>
+                            <option value="repair">Repairs</option>
+                        </select>
+                        <input type="text" name="q" placeholder="Search by vehicle make, model or glass type..." class="search-input" id="searchInput" autocomplete="off">
+                        <button type="submit" class="search-btn"><i class="fas fa-search"></i></button>
+                    </form>
+                    <div class="search-results" id="searchResults"></div>
+                </div>
+                <div class="nav-actions">
+                    <a href="contact.html" class="nav-action-btn"><i class="fas fa-user"></i><span>Account</span></a>
+                    <a href="index.html#quote" class="nav-action-btn nav-quote-btn"><i class="fas fa-file-invoice"></i><span>Quote</span><span class="quote-count" id="quoteCount">0</span></a>
+                </div>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+            </div>
+            <div class="nav-menu-wrapper" id="navMenuWrapper">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="has-dropdown"><a href="services.html" class="active">Services <i class="fas fa-chevron-down"></i></a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-menu-cta"><a href="tel:0732254809" class="nav-call-btn"><i class="fas fa-phone"></i> 073 225 4809</a></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <div class="page-breadcrumb">
+                    <a href="index.html">Home</a> <i class="fas fa-chevron-right" style="font-size:10px;"></i> <span>Services</span>
+                </div>
+                <h1>Our Services</h1>
+                <p>Complete auto glass solutions for every vehicle type and budget</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Catalog -->
+    <section class="service-catalog">
+        <div class="container">
+
+            <!-- Windscreen Replacement -->
+            <div class="service-card-detail" id="windscreen">
+                <div class="service-detail-img">
+                    <img src="images/services/WhatsApp Image 2026-04-15 at 3.09.18 PM.jpeg" alt="Windscreen Replacement" loading="lazy">
+                </div>
+                <div class="service-detail-content">
+                    <h3>Windscreen Replacement</h3>
+                    <p>Our windscreen replacement service covers all vehicle makes and models. We use SABS-approved glass and professional-grade adhesives to ensure a perfect seal and safe fitment. Most windscreen replacements are completed within 2 hours.</p>
+                    <div class="service-price-tag">
+                        <span>From</span>
+                        <strong>R1,500</strong>
+                    </div>
+                    <ul class="service-checklist">
+                        <li><i class="fas fa-check-circle"></i> SABS Approved Glass</li>
+                        <li><i class="fas fa-check-circle"></i> Same-Day Service</li>
+                        <li><i class="fas fa-check-circle"></i> Lifetime Warranty</li>
+                        <li><i class="fas fa-check-circle"></i> Rain Sensor Compatible</li>
+                        <li><i class="fas fa-check-circle"></i> Insurance Claims Welcome</li>
+                        <li><i class="fas fa-check-circle"></i> All Makes & Models</li>
+                    </ul>
+                    <a href="index.html#quote" class="btn btn-primary"><i class="fas fa-file-invoice"></i> Get Quote</a>
+                </div>
+            </div>
+
+            <!-- Rear Screen -->
+            <div class="service-card-detail" id="rear">
+                <div class="service-detail-img">
+                    <img src="images/services/WhatsApp Image 2026-04-15 at 3.09.18 PM (1).jpeg" alt="Rear Screen Replacement" loading="lazy">
+                </div>
+                <div class="service-detail-content">
+                    <h3>Rear Screen Replacement</h3>
+                    <p>Complete rear window replacement with proper heated demister reconnection. We stock rear glass for sedans, hatchbacks, SUVs and bakkies with professional fitment guaranteed.</p>
+                    <div class="service-price-tag">
+                        <span>From</span>
+                        <strong>R1,800</strong>
+                    </div>
+                    <ul class="service-checklist">
+                        <li><i class="fas fa-check-circle"></i> Heated Demister Ready</li>
+                        <li><i class="fas fa-check-circle"></i> OEM Quality Glass</li>
+                        <li><i class="fas fa-check-circle"></i> Professional Fitment</li>
+                        <li><i class="fas fa-check-circle"></i> Sedan, SUV & Bakkie</li>
+                        <li><i class="fas fa-check-circle"></i> Tinted Options Available</li>
+                        <li><i class="fas fa-check-circle"></i> Full Warranty</li>
+                    </ul>
+                    <a href="index.html#quote" class="btn btn-primary"><i class="fas fa-file-invoice"></i> Get Quote</a>
+                </div>
+            </div>
+
+            <!-- Door Glass -->
+            <div class="service-card-detail" id="door">
+                <div class="service-detail-img">
+                    <img src="images/services/WhatsApp Image 2026-04-15 at 3.09.17 PM (1).jpeg" alt="Door Glass Replacement" loading="lazy">
+                </div>
+                <div class="service-detail-content">
+                    <h3>Door Glass Replacement</h3>
+                    <p>Side window and door glass replacement for front and rear doors. We check window regulators, channels and guides to ensure smooth operation after installation.</p>
+                    <div class="service-price-tag">
+                        <span>From</span>
+                        <strong>R800</strong>
+                    </div>
+                    <ul class="service-checklist">
+                        <li><i class="fas fa-check-circle"></i> Front & Rear Doors</li>
+                        <li><i class="fas fa-check-circle"></i> Regulator Inspection</li>
+                        <li><i class="fas fa-check-circle"></i> Quick Installation</li>
+                        <li><i class="fas fa-check-circle"></i> All Vehicle Types</li>
+                        <li><i class="fas fa-check-circle"></i> Channel & Guide Check</li>
+                        <li><i class="fas fa-check-circle"></i> Affordable Pricing</li>
+                    </ul>
+                    <a href="index.html#quote" class="btn btn-primary"><i class="fas fa-file-invoice"></i> Get Quote</a>
+                </div>
+            </div>
+
+            <!-- Quarter Glass -->
+            <div class="service-card-detail" id="quarter">
+                <div class="service-detail-img">
+                    <img src="images/services/WhatsApp Image 2026-04-15 at 3.09.16 PM (1).jpeg" alt="Quarter Glass" loading="lazy">
+                </div>
+                <div class="service-detail-content">
+                    <h3>Quarter Glass Replacement</h3>
+                    <p>Quarter panel and vent window glass replacement with precision cutting and fitting. We handle both fixed and opening quarter glass panels for all vehicle models.</p>
+                    <div class="service-price-tag">
+                        <span>From</span>
+                        <strong>R550</strong>
+                    </div>
+                    <ul class="service-checklist">
+                        <li><i class="fas fa-check-circle"></i> Fixed & Opening Types</li>
+                        <li><i class="fas fa-check-circle"></i> Precision Fit</li>
+                        <li><i class="fas fa-check-circle"></i> OEM Adhesive</li>
+                        <li><i class="fas fa-check-circle"></i> All Models</li>
+                    </ul>
+                    <a href="index.html#quote" class="btn btn-primary"><i class="fas fa-file-invoice"></i> Get Quote</a>
+                </div>
+            </div>
+
+            <!-- Chip Repair -->
+            <div class="service-card-detail" id="chip">
+                <div class="service-detail-img">
+                    <img src="images/services/WhatsApp Image 2026-04-15 at 3.09.16 PM.jpeg" alt="Chip Repair" loading="lazy">
+                </div>
+                <div class="service-detail-content">
+                    <h3>Chip Repair</h3>
+                    <p>Professional windscreen chip repair that stops cracks from spreading. Our resin injection technology restores structural integrity and clarity in just 30 minutes. Save your windscreen before it needs full replacement.</p>
+                    <div class="service-price-tag">
+                        <span>From</span>
+                        <strong>R350</strong>
+                    </div>
+                    <ul class="service-checklist">
+                        <li><i class="fas fa-check-circle"></i> 30-Minute Service</li>
+                        <li><i class="fas fa-check-circle"></i> Resin Injection Tech</li>
+                        <li><i class="fas fa-check-circle"></i> Prevents Spreading</li>
+                        <li><i class="fas fa-check-circle"></i> Cost Effective</li>
+                        <li><i class="fas fa-check-circle"></i> Insurance Approved</li>
+                        <li><i class="fas fa-check-circle"></i> No Excess Required</li>
+                    </ul>
+                    <a href="index.html#quote" class="btn btn-primary"><i class="fas fa-file-invoice"></i> Get Quote</a>
+                </div>
+            </div>
+
+            <!-- Insurance Claims -->
+            <div class="service-card-detail" id="insurance">
+                <div class="service-detail-img">
+                    <img src="images/services/WhatsApp Image 2026-04-15 at 3.09.19 PM.jpeg" alt="Insurance Claims" loading="lazy">
+                </div>
+                <div class="service-detail-content">
+                    <h3>Insurance Claims</h3>
+                    <p>We handle your insurance claim from start to finish. Our team works with all major South African insurers to process your claim quickly, so you can focus on your day while we take care of everything.</p>
+                    <div class="service-price-tag">
+                        <span>From</span>
+                        <strong>R0*</strong>
+                    </div>
+                    <ul class="service-checklist">
+                        <li><i class="fas fa-check-circle"></i> All Major Insurers</li>
+                        <li><i class="fas fa-check-circle"></i> We Handle Paperwork</li>
+                        <li><i class="fas fa-check-circle"></i> Quick Processing</li>
+                        <li><i class="fas fa-check-circle"></i> Direct Billing</li>
+                        <li><i class="fas fa-check-circle"></i> Free Assessment</li>
+                        <li><i class="fas fa-check-circle"></i> *Subject to excess</li>
+                    </ul>
+                    <a href="index.html#quote" class="btn btn-primary"><i class="fas fa-file-invoice"></i> Get Quote</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="quote-section">
+        <div class="container">
+            <div style="text-align:center; color:#fff; max-width:600px; margin:0 auto;">
+                <span class="section-badge section-badge-light">Ready to Get Started?</span>
+                <h2 style="font-size:32px; font-weight:800; margin-bottom:16px; color:#fff;">Need a Quote?</h2>
+                <p style="color:rgba(255,255,255,0.7); margin-bottom:28px;">Get competitive pricing for any auto glass service. We respond within 24 hours.</p>
+                <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+                    <a href="index.html#quote" class="btn btn-primary btn-lg"><i class="fas fa-file-invoice"></i> Request Quote</a>
+                    <a href="tel:0732254809" class="btn btn-outline-light btn-lg"><i class="fas fa-phone"></i> Call Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col footer-about">
+                    <a href="index.html" class="footer-logo"><img src="images/brands/logo.jpeg" alt="Prototype Glass"><span>Prototype Glass</span></a>
+                    <p>Randburg's trusted auto glass specialists since 1995. SABS approved, insurance-friendly, and committed to quality workmanship.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/27732254809"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="about.html">About Us</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul><li><a href="services.html#windscreen">Windscreen Replacement</a></li><li><a href="services.html#rear">Rear Screen</a></li><li><a href="services.html#door">Door Glass</a></li><li><a href="services.html#chip">Chip Repair</a></li><li><a href="services.html#insurance">Insurance Claims</a></li></ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-location-dot"></i> 373 Jan Smuts Ave, Craighall Park</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:0732254809">073 225 4809</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@prototypeglass.co.za">info@prototypeglass.co.za</a></li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri 8am-5pm, Sat 8am-1pm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Prototype Glass Windscreen. All rights reserved.</p>
+                <div class="footer-bottom-right">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <div class="footer-payment"><span>We Accept:</span><i class="fab fa-cc-visa"></i><i class="fab fa-cc-mastercard"></i><i class="fas fa-money-bill-wave"></i></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scrollTop" class="scroll-top"><i class="fas fa-chevron-up"></i></button>
+    <a href="https://wa.me/27732254809" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <script src="js/main.js"></script>
+</body>
+</html>

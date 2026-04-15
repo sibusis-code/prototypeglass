@@ -1,0 +1,52 @@
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node modules (if using build tools)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Laravel (for future integration)
+/vendor/
+.env
+.env.backup
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+
+# Build files
+/dist/
+/build/
+*.min.css
+*.min.js
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+*.cache
+
+# Image optimization originals
+/images/originals/
+
+# Database
+*.sql
+*.sqlite
+
+# Backup files
+*.backup
+*.bak
