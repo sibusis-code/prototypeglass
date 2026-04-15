@@ -521,4 +521,196 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // ==========================================
+    // CHATBOT - Lead Pre-Qualification
+    // ==========================================
+    const chatbotToggle = document.getElementById('chatbotToggle');
+    const chatbotWindow = document.getElementById('chatbotWindow');
+    const chatbotBody = document.getElementById('chatbotBody');
+    const chatbotFooter = document.getElementById('chatbotFooter');
+
+    if (chatbotToggle && chatbotWindow) {
+        const chatFlow = [
+            {
+                id: 'welcome',
+                message: "Hi there! 👋 I'm here to help you get a quick quote for your auto glass needs. Let's get started!",
+                next: 'service'
+            },
+            {
+                id: 'service',
+                message: "What service do you need?",
+                options: [
+                    { label: 'Windscreen Replacement', value: 'Windscreen Replacement' },
+                    { label: 'Rear Glass', value: 'Rear Glass' },
+                    { label: 'Door Glass', value: 'Door Glass' },
+                    { label: 'Chip Repair', value: 'Chip Repair' },
+                    { label: 'Other', value: 'Other' }
+                ],
+                next: 'vehicle'
+            },
+            {
+                id: 'vehicle',
+                message: "What's your vehicle make & model? (e.g. Toyota Corolla 2020)",
+                input: true,
+                placeholder: 'e.g. Toyota Corolla 2020',
+                next: 'insurance'
+            },
+            {
+                id: 'insurance',
+                message: "Is this an insurance claim?",
+                options: [
+                    { label: 'Yes - Insurance Claim', value: 'Yes' },
+                    { label: 'No - Cash / Private', value: 'No' }
+                ],
+                next: 'name'
+            },
+            {
+                id: 'name',
+                message: "Great! What's your name?",
+                input: true,
+                placeholder: 'Your full name',
+                next: 'phone'
+            },
+            {
+                id: 'phone',
+                message: "And your phone number so we can reach you?",
+                input: true,
+                placeholder: 'e.g. 073 225 4809',
+                next: 'done'
+            },
+            {
+                id: 'done',
+                message: "Thank you! 🎉 One of our team members will contact you shortly with a quote. You can also call us directly at 073 225 4809.",
+                final: true
+            }
+        ];
+
+        let chatAnswers = {};
+        let currentStepIndex = 0;
+
+        function addBotMessage(text) {
+            const msg = document.createElement('div');
+            msg.className = 'chat-message bot';
+            msg.textContent = text;
+            chatbotBody.appendChild(msg);
+            chatbotBody.scrollTop = chatbotBody.scrollHeight;
+        }
+
+        function addUserMessage(text) {
+            const msg = document.createElement('div');
+            msg.className = 'chat-message user';
+            msg.textContent = text;
+            chatbotBody.appendChild(msg);
+            chatbotBody.scrollTop = chatbotBody.scrollHeight;
+        }
+
+        function showOptions(options, stepId) {
+            const container = document.createElement('div');
+            container.className = 'chat-options';
+            options.forEach(opt => {
+                const btn = document.createElement('button');
+                btn.className = 'chat-option-btn';
+                btn.textContent = opt.label;
+                btn.addEventListener('click', function() {
+                    chatAnswers[stepId] = opt.value;
+                    addUserMessage(opt.label);
+                    container.remove();
+                    clearFooter();
+                    currentStepIndex++;
+                    setTimeout(() => runStep(), 400);
+                });
+                container.appendChild(btn);
+            });
+            chatbotBody.appendChild(container);
+            chatbotBody.scrollTop = chatbotBody.scrollHeight;
+        }
+
+        function showInput(placeholder, stepId) {
+            clearFooter();
+            const area = document.createElement('div');
+            area.className = 'chat-input-area';
+            const input = document.createElement('input');
+            input.type = 'text';
+            input.placeholder = placeholder || 'Type here...';
+            const sendBtn = document.createElement('button');
+            sendBtn.innerHTML = '<i class="fas fa-paper-plane"></i>';
+
+            function submit() {
+                const val = input.value.trim();
+                if (!val) return;
+                chatAnswers[stepId] = val;
+                addUserMessage(val);
+                area.remove();
+                currentStepIndex++;
+                setTimeout(() => runStep(), 400);
+            }
+
+            sendBtn.addEventListener('click', submit);
+            input.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') submit();
+            });
+
+            area.appendChild(input);
+            area.appendChild(sendBtn);
+            chatbotFooter.appendChild(area);
+            input.focus();
+        }
+
+        function clearFooter() {
+            chatbotFooter.innerHTML = '';
+        }
+
+        function showRestart() {
+            clearFooter();
+            const btn = document.createElement('button');
+            btn.className = 'chatbot-restart';
+            btn.innerHTML = '<i class="fas fa-redo"></i> Start Over';
+            btn.addEventListener('click', resetChat);
+            chatbotFooter.appendChild(btn);
+        }
+
+        function runStep() {
+            const step = chatFlow[currentStepIndex];
+            if (!step) return;
+
+            addBotMessage(step.message);
+
+            if (step.final) {
+                showRestart();
+                // Send data to WhatsApp as a fallback
+                const summary = Object.entries(chatAnswers)
+                    .map(([k, v]) => `${k}: ${v}`)
+                    .join('%0A');
+                console.log('Lead captured:', chatAnswers);
+                return;
+            }
+
+            if (step.options) {
+                setTimeout(() => showOptions(step.options, step.id), 300);
+            } else if (step.input) {
+                setTimeout(() => showInput(step.placeholder, step.id), 300);
+            } else {
+                currentStepIndex++;
+                setTimeout(() => runStep(), 600);
+            }
+        }
+
+        function resetChat() {
+            chatAnswers = {};
+            currentStepIndex = 0;
+            chatbotBody.innerHTML = '';
+            clearFooter();
+            runStep();
+        }
+
+        // Toggle chatbot
+        chatbotToggle.addEventListener('click', function() {
+            const isOpen = chatbotWindow.classList.toggle('open');
+            chatbotToggle.classList.toggle('active', isOpen);
+            if (isOpen && chatbotBody.children.length === 0) {
+                runStep();
+            }
+        });
+    }
+
 });
