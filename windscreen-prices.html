@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Prototype Glass Windscreen in Randburg. Call 073 225 4809 or visit us at 373 Jan Smuts Ave, Craighall Park.">
-    <title>Contact Us | Prototype Glass Windscreen - Randburg</title>
+    <meta name="description" content="Windscreen prices for all vehicle makes & models. Affordable SABS-approved auto glass from R1,500. Same-day fitting in Randburg.">
+    <title>Windscreen Prices | Prototype Glass Windscreen - Randburg</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -90,7 +90,7 @@
                             </div>
                         </div>
                     </li>
-                    <li><a href="windscreen-prices.html">Windscreen Prices</a></li>
+                    <li><a href="windscreen-prices.html" class="active">Windscreen Prices</a></li>
                     <li><a href="windscreen-repair.html">Windscreen Repair</a></li>
                     <li class="has-dropdown">
                         <a href="#">Company <i class="fas fa-chevron-down"></i></a>
@@ -110,7 +110,7 @@
                         </div>
                     </li>
                     <li><a href="franchise.html">Franchise</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
                 <div class="nav-menu-cta"><a href="tel:0732254809" class="nav-call-btn"><i class="fas fa-phone"></i> 073 225 4809</a></div>
             </div>
@@ -122,155 +122,80 @@
         <div class="container">
             <div class="page-header-content">
                 <div class="page-breadcrumb">
-                    <a href="index.html">Home</a> <i class="fas fa-chevron-right" style="font-size:10px;"></i> <span>Contact</span>
+                    <a href="index.html">Home</a> <i class="fas fa-chevron-right" style="font-size:10px;"></i> <span>Windscreen Prices</span>
                 </div>
-                <h1>Contact Us</h1>
-                <p>We're here to help with all your auto glass needs</p>
+                <h1>Windscreen Prices</h1>
+                <p>Browse our full catalog — find your vehicle, add to cart, and request a quote</p>
             </div>
         </div>
     </section>
 
-    <!-- Contact Cards -->
-    <section class="contact-section">
+    <!-- Shop Catalog -->
+    <section class="shop-section">
         <div class="container">
-            <div class="contact-cards-grid">
-                <div class="contact-card">
-                    <i class="fas fa-phone"></i>
-                    <h3>Call Us</h3>
-                    <p><a href="tel:0732254809">073 225 4809</a></p>
-                    <p>Mon-Fri 8am-5pm<br>Sat 8am-1pm</p>
-                </div>
-                <div class="contact-card">
-                    <i class="fab fa-whatsapp"></i>
-                    <h3>WhatsApp</h3>
-                    <p><a href="https://wa.me/27732254809" target="_blank">073 225 4809</a></p>
-                    <p>Quick responses<br>Send photos of damage</p>
-                </div>
-                <div class="contact-card">
-                    <i class="fas fa-envelope"></i>
-                    <h3>Email Us</h3>
-                    <p><a href="mailto:info@prototypeglass.co.za">info@prototypeglass.co.za</a></p>
-                    <p>We reply within<br>24 hours</p>
-                </div>
-                <div class="contact-card">
-                    <i class="fas fa-location-dot"></i>
-                    <h3>Visit Us</h3>
-                    <p>373 Jan Smuts Ave</p>
-                    <p>Craighall Park<br>Randburg, 2196</p>
-                </div>
-            </div>
+            <div class="shop-layout">
 
-            <!-- Contact Form & Map Grid -->
-            <div class="location-grid">
-                <div class="location-info">
-                    <span class="section-badge">Send a Message</span>
-                    <h2>Get In Touch</h2>
-                    <form id="quoteForm" action="php/submit-quote.php" method="POST" style="margin-top:24px;">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Full Name <span class="required">*</span></label>
-                                <input type="text" id="name" name="name" placeholder="Your full name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Phone <span class="required">*</span></label>
-                                <input type="tel" id="phone" name="phone" placeholder="073 225 4809" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" placeholder="your@email.com">
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="vehicle">Vehicle <span class="required">*</span></label>
-                                <input type="text" id="vehicle" name="vehicle" placeholder="e.g. BMW 320i 2021" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="glassType">Service Required <span class="required">*</span></label>
-                                <select id="glassType" name="glassType" required>
-                                    <option value="">Select service</option>
-                                    <option value="windscreen">Windscreen Replacement</option>
-                                    <option value="rear-screen">Rear Screen</option>
-                                    <option value="door-glass">Door Glass</option>
-                                    <option value="quarter-glass">Quarter Glass</option>
-                                    <option value="chip-repair">Chip Repair</option>
-                                    <option value="insurance">Insurance Claim</option>
-                                    <option value="other">Other / General Enquiry</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="insurance">Insurance Claim?</label>
-                            <select id="insurance" name="insurance">
-                                <option value="no">No - Cash Payment</option>
-                                <option value="yes">Yes - Insurance Claim</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="4" placeholder="Describe the damage, preferred date, or any questions..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block"><i class="fas fa-paper-plane"></i> Send Message</button>
-                    </form>
-                </div>
-                <div>
-                    <div class="location-map" style="margin-bottom:28px;">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3583.123456789!2d28.044123456789!3d-26.134567890123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDA4JzA0LjQiUyAyOMKwMDInMzguOCJF!5e0!3m2!1sen!2sza!4v1234567890123!5m2!1sen!2sza" 
-                            width="100%" height="100%" style="border:0; border-radius:16px;" 
-                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <!-- Sidebar Filters -->
+                <aside class="shop-sidebar" id="shopSidebar">
+                    <button class="shop-sidebar-close" id="sidebarClose"><i class="fas fa-times"></i></button>
+
+                    <div class="sidebar-block">
+                        <label class="sidebar-label" for="shopSearch">Search</label>
+                        <input type="text" id="shopSearch" class="sidebar-search" placeholder="Search...">
                     </div>
-                    <div class="location-details">
-                        <div class="location-detail">
-                            <i class="fas fa-clock"></i>
-                            <div>
-                                <strong>Business Hours</strong>
-                                <p>Monday - Friday: 8:00am - 5:00pm<br>Saturday: 8:00am - 1:00pm<br>Sunday & Public Holidays: Closed</p>
-                            </div>
+
+                    <div class="sidebar-block">
+                        <label class="sidebar-label">Price Range</label>
+                        <div class="price-range-wrap">
+                            <input type="range" id="priceMin" class="price-slider" min="200" max="170000" value="200" step="100">
+                            <input type="range" id="priceMax" class="price-slider" min="200" max="170000" value="170000" step="100">
+                        </div>
+                        <div class="price-range-values">
+                            <span>R <strong id="priceMinVal">200</strong></span>
+                            <span>R <strong id="priceMaxVal">170,000</strong></span>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- FAQ Section -->
-    <section class="faq-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">FAQ</span>
-                <h2>Frequently Asked Questions</h2>
-                <p>Quick answers to common questions about our services</p>
-            </div>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <button class="faq-question">How long does a windscreen replacement take? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer"><p>Most windscreen replacements are completed within 1-2 hours. We recommend allowing the adhesive to cure for at least 1 hour before driving.</p></div>
+                    <div class="sidebar-block">
+                        <label class="sidebar-label">Auto-Glass Type</label>
+                        <div class="sidebar-checks" id="typeFilters">
+                            <label class="sidebar-check"><input type="checkbox" value="Cab Glass"> Cab Glass</label>
+                            <label class="sidebar-check"><input type="checkbox" value="Cab Slider"> Cab Slider</label>
+                            <label class="sidebar-check"><input type="checkbox" value="Door Glass"> Door Glass</label>
+                            <label class="sidebar-check"><input type="checkbox" value="Rearscreen"> Rearscreen</label>
+                            <label class="sidebar-check"><input type="checkbox" value="Windscreen"> Windscreen</label>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-block">
+                        <label class="sidebar-label">Vehicle Brand</label>
+                        <div class="sidebar-checks sidebar-checks-scroll" id="brandFilters">
+                            <!-- populated by JS -->
+                        </div>
+                    </div>
+
+                    <button class="btn btn-outline btn-block sidebar-reset" id="resetFilters"><i class="fas fa-rotate-left"></i> Reset Filters</button>
+                </aside>
+
+                <!-- Product Grid -->
+                <div class="shop-main">
+                    <div class="shop-toolbar">
+                        <button class="shop-filter-toggle" id="filterToggle"><i class="fas fa-sliders"></i> Filters</button>
+                        <span class="shop-result-count" id="resultCount">Showing 0 results</span>
+                        <select class="shop-sort" id="shopSort">
+                            <option value="default">Default sorting</option>
+                            <option value="price-asc">Price: Low to High</option>
+                            <option value="price-desc">Price: High to Low</option>
+                            <option value="name-asc">Name: A to Z</option>
+                            <option value="name-desc">Name: Z to A</option>
+                        </select>
+                    </div>
+                    <div class="shop-grid" id="shopGrid">
+                        <!-- populated by JS -->
+                    </div>
+                    <div class="shop-pagination" id="shopPagination"></div>
                 </div>
-                <div class="faq-item">
-                    <button class="faq-question">Do you handle insurance claims? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer"><p>Yes! We work with all major South African insurers including OUTsurance, Discovery Insure, Santam, Hollard, and more. We handle all the paperwork for you.</p></div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">Is the glass SABS approved? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer"><p>Absolutely. We only use SABS-approved glass that meets South African safety standards. All our glass comes with a quality certificate.</p></div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">Do you offer a warranty? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer"><p>Yes, all our installations come with a lifetime warranty against manufacturing defects and leaks. If there's ever an issue, we'll fix it at no charge.</p></div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">Can you fix a chip without replacing the whole windscreen? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer"><p>Yes, if the chip is smaller than a R5 coin and not in the driver's direct line of sight, we can usually repair it with our resin injection technology in about 30 minutes.</p></div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">What payment methods do you accept? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer"><p>We accept cash, Visa, Mastercard, and EFT payments. For insurance claims, we bill the insurer directly — you only pay the excess (if applicable).</p></div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">Do I need to book in advance? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer"><p>While walk-ins are welcome, we recommend booking in advance to guarantee same-day service and ensure we have the correct glass in stock for your vehicle.</p></div>
-                </div>
+
             </div>
         </div>
     </section>

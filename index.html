@@ -66,6 +66,7 @@
                 </div>
 
                 <div class="nav-actions">
+                    <button class="nav-action-btn nav-account-btn" title="Account" id="accountToggleBtn"><i class="fas fa-user"></i><span>Account</span></button>
                     <button class="nav-action-btn nav-cart-btn" title="Cart" id="cartToggleBtn">
                         <i class="fas fa-shopping-cart"></i>
                         <span>Cart</span>
@@ -107,8 +108,26 @@
                             </div>
                         </div>
                     </li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="windscreen-prices.html">Windscreen Prices</a></li>
+                    <li><a href="windscreen-repair.html">Windscreen Repair</a></li>
+                    <li class="has-dropdown">
+                        <a href="#">Company <i class="fas fa-chevron-down"></i></a>
+                        <div class="company-dropdown">
+                            <a href="anti-smash-grab.html" class="company-drop-item">
+                                <i class="fas fa-hand-fist"></i>
+                                <div><strong>Anti-Smash & Grab</strong><span>Protect yourself and your property</span></div>
+                            </a>
+                            <a href="sell-your-glass.html" class="company-drop-item">
+                                <i class="fas fa-money-bill-transfer"></i>
+                                <div><strong>Sell Your Glass</strong><span>Make extra cash by selling your auto-glass</span></div>
+                            </a>
+                            <a href="about.html" class="company-drop-item">
+                                <i class="fas fa-circle-info"></i>
+                                <div><strong>About Us</strong><span>Get to know more about who we are</span></div>
+                            </a>
+                        </div>
+                    </li>
+                    <li><a href="franchise.html">Franchise</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
                 <div class="nav-menu-cta">
@@ -634,8 +653,9 @@
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="services.html">Services</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="windscreen-prices.html">Windscreen Prices</a></li>
+                        <li><a href="windscreen-repair.html">Windscreen Repair</a></li>
+                        <li><a href="franchise.html">Franchise</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
@@ -731,6 +751,43 @@
         </div>
         <div id="chatbotBody" class="chatbot-body"></div>
         <div id="chatbotFooter" class="chatbot-footer"></div>
+    </div>
+
+    <!-- Account Modal -->
+    <div class="account-overlay" id="accountOverlay"></div>
+    <div class="account-modal" id="accountModal">
+        <div class="account-modal-header">
+            <h3 id="accountModalTitle"><i class="fas fa-user"></i> Sign In</h3>
+            <button class="account-modal-close" id="accountModalClose"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="account-modal-body">
+            <form id="loginForm" class="account-form">
+                <div class="form-group"><label for="loginEmail">Email Address</label><input type="email" id="loginEmail" required placeholder="you@example.com"></div>
+                <div class="form-group"><label for="loginPassword">Password</label><input type="password" id="loginPassword" required placeholder="Your password" minlength="8"></div>
+                <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                <p class="account-switch">Don't have an account? <a href="#" id="showRegister">Create one</a></p>
+            </form>
+            <form id="registerForm" class="account-form" style="display:none;">
+                <div class="form-group"><label for="regName">Full Name</label><input type="text" id="regName" required placeholder="John Doe"></div>
+                <div class="form-group"><label for="regEmail">Email Address</label><input type="email" id="regEmail" required placeholder="you@example.com"></div>
+                <div class="form-group"><label for="regPhone">Phone Number</label><input type="tel" id="regPhone" required placeholder="073 225 4809"></div>
+                <div class="form-group"><label for="regPassword">Password</label><input type="password" id="regPassword" required placeholder="Min 8 characters" minlength="8"></div>
+                <div class="form-group"><label for="regConfirm">Confirm Password</label><input type="password" id="regConfirm" required placeholder="Repeat password" minlength="8"></div>
+                <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+                <p class="account-switch">Already have an account? <a href="#" id="showLogin">Sign in</a></p>
+            </form>
+            <div id="accountLoggedIn" class="account-logged-in" style="display:none;">
+                <div class="account-avatar"><i class="fas fa-user-circle"></i></div>
+                <h4 id="accountUserName">Welcome back!</h4>
+                <p id="accountUserEmail"></p>
+                <div class="account-menu">
+                    <a href="#"><i class="fas fa-box"></i> My Orders</a>
+                    <a href="#"><i class="fas fa-heart"></i> Wishlist</a>
+                    <a href="#"><i class="fas fa-cog"></i> Settings</a>
+                </div>
+                <button class="btn btn-outline btn-block" id="accountLogout"><i class="fas fa-sign-out-alt"></i> Log Out</button>
+            </div>
+        </div>
     </div>
 
     <script src="js/main.js"></script>

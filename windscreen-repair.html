@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Prototype Glass Windscreen in Randburg. Call 073 225 4809 or visit us at 373 Jan Smuts Ave, Craighall Park.">
-    <title>Contact Us | Prototype Glass Windscreen - Randburg</title>
+    <meta name="description" content="Professional windscreen chip & crack repair in Randburg from R350. 30-minute service, SABS-approved resin. Repair vs replacement guide.">
+    <title>Windscreen Repair | Prototype Glass Windscreen - Randburg</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -91,7 +91,7 @@
                         </div>
                     </li>
                     <li><a href="windscreen-prices.html">Windscreen Prices</a></li>
-                    <li><a href="windscreen-repair.html">Windscreen Repair</a></li>
+                    <li><a href="windscreen-repair.html" class="active">Windscreen Repair</a></li>
                     <li class="has-dropdown">
                         <a href="#">Company <i class="fas fa-chevron-down"></i></a>
                         <div class="company-dropdown">
@@ -110,7 +110,7 @@
                         </div>
                     </li>
                     <li><a href="franchise.html">Franchise</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
                 <div class="nav-menu-cta"><a href="tel:0732254809" class="nav-call-btn"><i class="fas fa-phone"></i> 073 225 4809</a></div>
             </div>
@@ -122,154 +122,159 @@
         <div class="container">
             <div class="page-header-content">
                 <div class="page-breadcrumb">
-                    <a href="index.html">Home</a> <i class="fas fa-chevron-right" style="font-size:10px;"></i> <span>Contact</span>
+                    <a href="index.html">Home</a> <i class="fas fa-chevron-right" style="font-size:10px;"></i> <span>Windscreen Repair</span>
                 </div>
-                <h1>Contact Us</h1>
-                <p>We're here to help with all your auto glass needs</p>
+                <h1>Windscreen Repair</h1>
+                <p>Fast, affordable chip and crack repair — often covered by insurance at R0 excess</p>
             </div>
         </div>
     </section>
 
-    <!-- Contact Cards -->
-    <section class="contact-section">
-        <div class="container">
-            <div class="contact-cards-grid">
-                <div class="contact-card">
-                    <i class="fas fa-phone"></i>
-                    <h3>Call Us</h3>
-                    <p><a href="tel:0732254809">073 225 4809</a></p>
-                    <p>Mon-Fri 8am-5pm<br>Sat 8am-1pm</p>
-                </div>
-                <div class="contact-card">
-                    <i class="fab fa-whatsapp"></i>
-                    <h3>WhatsApp</h3>
-                    <p><a href="https://wa.me/27732254809" target="_blank">073 225 4809</a></p>
-                    <p>Quick responses<br>Send photos of damage</p>
-                </div>
-                <div class="contact-card">
-                    <i class="fas fa-envelope"></i>
-                    <h3>Email Us</h3>
-                    <p><a href="mailto:info@prototypeglass.co.za">info@prototypeglass.co.za</a></p>
-                    <p>We reply within<br>24 hours</p>
-                </div>
-                <div class="contact-card">
-                    <i class="fas fa-location-dot"></i>
-                    <h3>Visit Us</h3>
-                    <p>373 Jan Smuts Ave</p>
-                    <p>Craighall Park<br>Randburg, 2196</p>
-                </div>
-            </div>
-
-            <!-- Contact Form & Map Grid -->
-            <div class="location-grid">
-                <div class="location-info">
-                    <span class="section-badge">Send a Message</span>
-                    <h2>Get In Touch</h2>
-                    <form id="quoteForm" action="php/submit-quote.php" method="POST" style="margin-top:24px;">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Full Name <span class="required">*</span></label>
-                                <input type="text" id="name" name="name" placeholder="Your full name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Phone <span class="required">*</span></label>
-                                <input type="tel" id="phone" name="phone" placeholder="073 225 4809" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" placeholder="your@email.com">
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="vehicle">Vehicle <span class="required">*</span></label>
-                                <input type="text" id="vehicle" name="vehicle" placeholder="e.g. BMW 320i 2021" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="glassType">Service Required <span class="required">*</span></label>
-                                <select id="glassType" name="glassType" required>
-                                    <option value="">Select service</option>
-                                    <option value="windscreen">Windscreen Replacement</option>
-                                    <option value="rear-screen">Rear Screen</option>
-                                    <option value="door-glass">Door Glass</option>
-                                    <option value="quarter-glass">Quarter Glass</option>
-                                    <option value="chip-repair">Chip Repair</option>
-                                    <option value="insurance">Insurance Claim</option>
-                                    <option value="other">Other / General Enquiry</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="insurance">Insurance Claim?</label>
-                            <select id="insurance" name="insurance">
-                                <option value="no">No - Cash Payment</option>
-                                <option value="yes">Yes - Insurance Claim</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="4" placeholder="Describe the damage, preferred date, or any questions..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block"><i class="fas fa-paper-plane"></i> Send Message</button>
-                    </form>
-                </div>
-                <div>
-                    <div class="location-map" style="margin-bottom:28px;">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3583.123456789!2d28.044123456789!3d-26.134567890123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDA4JzA0LjQiUyAyOMKwMDInMzguOCJF!5e0!3m2!1sen!2sza!4v1234567890123!5m2!1sen!2sza" 
-                            width="100%" height="100%" style="border:0; border-radius:16px;" 
-                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                    <div class="location-details">
-                        <div class="location-detail">
-                            <i class="fas fa-clock"></i>
-                            <div>
-                                <strong>Business Hours</strong>
-                                <p>Monday - Friday: 8:00am - 5:00pm<br>Saturday: 8:00am - 1:00pm<br>Sunday & Public Holidays: Closed</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq-section">
+    <!-- Repair Intro -->
+    <section class="service-catalog">
         <div class="container">
             <div class="section-header">
-                <span class="section-badge">FAQ</span>
-                <h2>Frequently Asked Questions</h2>
-                <p>Quick answers to common questions about our services</p>
+                <span class="section-badge">Expert Repairs</span>
+                <h2>Windscreen Chip & Crack Repair</h2>
+                <p>Don't let a small chip turn into an expensive replacement. Our expert technicians use SABS-approved resin injection to restore your windscreen's structural integrity in just 30 minutes.</p>
             </div>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <button class="faq-question">How long does a windscreen replacement take? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer"><p>Most windscreen replacements are completed within 1-2 hours. We recommend allowing the adhesive to cure for at least 1 hour before driving.</p></div>
+
+            <!-- Chip Repair Service -->
+            <div class="service-card-detail" id="chip-repair">
+                <div class="service-detail-img">
+                    <img src="images/services/chip-repair.jpg" alt="Windscreen Chip Repair">
+                    <div class="service-price-tag"><span>From</span><strong>R350</strong></div>
                 </div>
-                <div class="faq-item">
-                    <button class="faq-question">Do you handle insurance claims? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer"><p>Yes! We work with all major South African insurers including OUTsurance, Discovery Insure, Santam, Hollard, and more. We handle all the paperwork for you.</p></div>
+                <div class="service-detail-content">
+                    <h3>Chip Repair</h3>
+                    <p>Professional resin injection repair for stone chips and small bullseye damage. Prevents chips from spreading into cracks and restores structural integrity. Takes only 30 minutes while you wait.</p>
+                    <ul class="service-checklist">
+                        <li><i class="fas fa-check-circle"></i> <strong>30-Minute Service</strong> — done while you wait</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>SABS-Approved Resin</strong> — UV-cured for durability</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Insurance Covered</strong> — R0 excess on most policies</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Prevents Spreading</strong> — stops cracks before they grow</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Clear Finish</strong> — nearly invisible after repair</li>
+                    </ul>
+                    <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:20px;">
+                        <a href="index.html#quote" class="btn btn-primary"><i class="fas fa-file-invoice"></i> Book Repair</a>
+                        <a href="tel:0732254809" class="btn btn-outline"><i class="fas fa-phone"></i> Call Us</a>
+                    </div>
                 </div>
-                <div class="faq-item">
-                    <button class="faq-question">Is the glass SABS approved? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer"><p>Absolutely. We only use SABS-approved glass that meets South African safety standards. All our glass comes with a quality certificate.</p></div>
+            </div>
+
+            <!-- Crack Repair Service -->
+            <div class="service-card-detail" id="crack-repair">
+                <div class="service-detail-img">
+                    <img src="images/services/crack-repair.jpg" alt="Windscreen Crack Repair">
+                    <div class="service-price-tag"><span>From</span><strong>R500</strong></div>
                 </div>
-                <div class="faq-item">
-                    <button class="faq-question">Do you offer a warranty? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer"><p>Yes, all our installations come with a lifetime warranty against manufacturing defects and leaks. If there's ever an issue, we'll fix it at no charge.</p></div>
+                <div class="service-detail-content">
+                    <h3>Crack Repair</h3>
+                    <p>For cracks up to 15cm in length that haven't reached the edge of the windscreen. Our resin injection process seals the crack and prevents further spreading. Longer cracks may require full replacement.</p>
+                    <ul class="service-checklist">
+                        <li><i class="fas fa-check-circle"></i> <strong>Cracks Up To 15cm</strong> — repaired without replacement</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Structural Integrity</strong> — full strength restored</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Same-Day Service</strong> — no appointment needed</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Insurance Friendly</strong> — most policies cover it</li>
+                    </ul>
+                    <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:20px;">
+                        <a href="index.html#quote" class="btn btn-primary"><i class="fas fa-file-invoice"></i> Book Repair</a>
+                        <a href="tel:0732254809" class="btn btn-outline"><i class="fas fa-phone"></i> Call Us</a>
+                    </div>
                 </div>
-                <div class="faq-item">
-                    <button class="faq-question">Can you fix a chip without replacing the whole windscreen? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer"><p>Yes, if the chip is smaller than a R5 coin and not in the driver's direct line of sight, we can usually repair it with our resin injection technology in about 30 minutes.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Repair vs Replace -->
+    <section class="repair-guide">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Know When</span>
+                <h2>Repair vs. Replacement</h2>
+                <p>Not every chip needs a full windscreen replacement. Here's how to know which service you need.</p>
+            </div>
+            <div class="repair-comparison">
+                <div class="repair-comparison-card repair-card">
+                    <div class="repair-comparison-icon"><i class="fas fa-wrench"></i></div>
+                    <h3>Repair</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Chip smaller than a R5 coin</li>
+                        <li><i class="fas fa-check"></i> Crack shorter than 15cm</li>
+                        <li><i class="fas fa-check"></i> Damage not in driver's direct line of sight</li>
+                        <li><i class="fas fa-check"></i> Crack hasn't reached the edge</li>
+                        <li><i class="fas fa-check"></i> Only 1-2 chips on the windscreen</li>
+                    </ul>
+                    <div class="repair-comparison-price">
+                        <span>From</span>
+                        <strong>R350</strong>
+                    </div>
+                    <a href="index.html#quote" class="btn btn-primary btn-block">Book a Repair</a>
                 </div>
-                <div class="faq-item">
-                    <button class="faq-question">What payment methods do you accept? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer"><p>We accept cash, Visa, Mastercard, and EFT payments. For insurance claims, we bill the insurer directly — you only pay the excess (if applicable).</p></div>
+                <div class="repair-comparison-vs">VS</div>
+                <div class="repair-comparison-card replace-card">
+                    <div class="repair-comparison-icon"><i class="fas fa-car-burst"></i></div>
+                    <h3>Replace</h3>
+                    <ul>
+                        <li><i class="fas fa-times"></i> Crack longer than 15cm</li>
+                        <li><i class="fas fa-times"></i> Multiple cracks or branching</li>
+                        <li><i class="fas fa-times"></i> Damage in driver's line of sight</li>
+                        <li><i class="fas fa-times"></i> Crack reaches the screen edge</li>
+                        <li><i class="fas fa-times"></i> 3+ chips on the windscreen</li>
+                    </ul>
+                    <div class="repair-comparison-price">
+                        <span>From</span>
+                        <strong>R1,500</strong>
+                    </div>
+                    <a href="windscreen-prices.html" class="btn btn-primary btn-block">See Prices</a>
                 </div>
-                <div class="faq-item">
-                    <button class="faq-question">Do I need to book in advance? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer"><p>While walk-ins are welcome, we recommend booking in advance to guarantee same-day service and ensure we have the correct glass in stock for your vehicle.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="values-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Simple Process</span>
+                <h2>How Windscreen Repair Works</h2>
+                <p>Our repair process is quick, proven, and hassle-free</p>
+            </div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <i class="fas fa-magnifying-glass"></i>
+                    <h3>1. Inspect</h3>
+                    <p>We assess the damage to determine if a repair is possible or if replacement is needed.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-syringe"></i>
+                    <h3>2. Inject Resin</h3>
+                    <p>SABS-approved resin is injected under pressure into the chip or crack to fill and seal it.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-sun"></i>
+                    <h3>3. UV Cure</h3>
+                    <p>The resin is cured with UV light, hardening it to restore full structural strength.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-circle-check"></i>
+                    <h3>4. Polish & Done</h3>
+                    <p>We polish the surface smooth. The repair is nearly invisible and your windscreen is roadworthy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="quote-section">
+        <div class="container">
+            <div style="text-align:center; color:#fff; max-width:600px; margin:0 auto;">
+                <span class="section-badge section-badge-light">Act Fast</span>
+                <h2 style="font-size:32px; font-weight:800; margin-bottom:16px; color:#fff;">Chip Today, Crack Tomorrow</h2>
+                <p style="color:rgba(255,255,255,0.7); margin-bottom:28px;">Don't wait — small chips can quickly turn into expensive cracks. Get it repaired in 30 minutes from just R350.</p>
+                <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+                    <a href="index.html#quote" class="btn btn-primary btn-lg"><i class="fas fa-file-invoice"></i> Book a Repair</a>
+                    <a href="tel:0732254809" class="btn btn-outline-light btn-lg"><i class="fas fa-phone"></i> Call Now</a>
                 </div>
             </div>
         </div>
